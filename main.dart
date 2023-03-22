@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 void main() {
-  runApp(
-    MaterialApp(
-      title: "Demo App",
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.menu),
-          title: Text("Flutter App"),
-          backgroundColor: Color(0XFFffc107),
-          centerTitle: true,
-        ),
-        body: Center(
-          child: Text(
-            "Red & White",
-            style: TextStyle(
-                fontSize: 57,
-                color: Color.fromRGBO(255, 34, 4, 0.90),
-                decoration: TextDecoration.underline,
-                decorationStyle: TextDecorationStyle.double,
-                decorationColor: Color.fromRGBO(215, 196, 22, 0.8)),
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.menu),
+        backgroundColor: Color.fromRGBO(255, 0, 34, 0.858),
+        title: Text(
+          "Main Page ",
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
           ),
+        ),
+        centerTitle: true,
+        // Icon(Icons.menu),
+      ),
+      body: const Center(
+        child: Text(
+          '     Red and White Group of Institues\nOne step in Changing Eucation Chain....',
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Color.fromRGBO(207, 37, 43, 0.769)),
         ),
       ),
     ),
-  );
+  ));
 }
