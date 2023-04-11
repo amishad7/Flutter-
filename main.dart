@@ -9,9 +9,9 @@ void main() {
         backgroundColor: Colors.black,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.red.shade900,
           title: Text(
-            "Launch Button  ",
+            "Dark Shadow Button ",
             style: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 20,
@@ -19,38 +19,37 @@ void main() {
           ),
         ),
         body: Center(
-          child: Ink(
-            child: InkWell(
-              onTap: () {
-                print("Tap ${c++}");
-              },
-              child: Container(
-                margin: EdgeInsets.all(20),
-                alignment: Alignment.center,
-                height: 200,
-                width: 170,
-                child: Text(
-                  "Go",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
+          child: GestureDetector(
+            onTap: () {
+              print("Tap ${c++}");
+            },
+            child: Container(
+              margin: EdgeInsets.all(20),
+              alignment: Alignment.center,
+              height: 45,
+              width: 167,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.black,
+                border: Border.all(
+                  color: Colors.transparent,
+                  width: 0.45,
                 ),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.black,
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 0.45,
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(0, 0),
+                    color: Colors.red,
+                    blurRadius: 11,
+                    spreadRadius: 06,
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(0, 0),
-                      color: Colors.green,
-                      blurRadius: 11,
-                      spreadRadius: 07,
-                    ),
-                  ],
+                ],
+              ),
+              child: Text(
+                "Tap",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
                 ),
               ),
             ),
