@@ -6,12 +6,12 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF48416a),
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.red.shade900,
+          backgroundColor: Color(0xFF48416a),
           title: Text(
-            "Dark Shadow Button ",
+            "Gredient Button ",
             style: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 20,
@@ -26,31 +26,31 @@ void main() {
             child: Container(
               margin: EdgeInsets.all(20),
               alignment: Alignment.center,
-              height: 45,
+              height: 57,
               width: 167,
               decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.black,
-                border: Border.all(
-                  color: Colors.transparent,
-                  width: 0.45,
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF932eb4),
+                    Color(0xFF6459cf),
+                    Color(0xFF506bd9),
+                    Color(0xFF2a8dee),
+                  ],
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 0),
-                    color: Colors.red,
-                    blurRadius: 11,
-                    spreadRadius: 06,
-                  ),
-                ],
-              ),
-              child: Text(
-                "Tap",
-                style: TextStyle(
-                  fontSize: 20,
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(27),
+                color: Colors.white,
+                border: Border.all(
+                  width: 0.45,
                   color: Colors.white,
                 ),
+              ),
+              child: Text(
+                "Flutter",
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal),
               ),
             ),
           ),
